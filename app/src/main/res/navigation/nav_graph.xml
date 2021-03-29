@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/inputFragment">
+    <fragment
+        android:id="@+id/inputFragment"
+        android:name="ca.tetervak.timedialogdemo.InputFragment"
+        android:label="InputFragment" >
+        <action
+            android:id="@+id/action_inputFragment_to_timeDialog"
+            app:destination="@id/timeDialog" />
+    </fragment>
+    <dialog
+        android:id="@+id/timeDialog"
+        android:name="ca.tetervak.timedialogdemo.dialogs.TimeDialog"
+        android:label="TimeDialog" >
+        <argument
+            android:name="requestCode"
+            app:argType="integer" />
+        <argument
+            android:name="date"
+            app:argType="java.util.Date" />
+    </dialog>
+    <dialog
+        android:id="@+id/aboutDialog"
+        android:name="ca.tetervak.timedialogdemo.dialogs.AboutDialog"
+        android:label="AboutDialog" /><action android:id="@+id/action_global_aboutDialog" app:destination="@id/aboutDialog"/>
+</navigation>
