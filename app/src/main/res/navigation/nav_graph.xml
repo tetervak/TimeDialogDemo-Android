@@ -7,10 +7,12 @@
     <fragment
         android:id="@+id/inputFragment"
         android:name="ca.tetervak.timedialogdemo.InputFragment"
-        android:label="InputFragment" >
+        android:label="InputFragment"
+        tools:layout="@layout/input_fragment">
         <action
             android:id="@+id/action_inputFragment_to_timeDialog"
             app:destination="@id/timeDialog" />
+
     </fragment>
     <dialog
         android:id="@+id/timeDialog"
